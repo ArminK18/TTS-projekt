@@ -154,7 +154,7 @@ class LJSpeechProcessor(BaseProcessor):
         text_norm = parts[self.position["text_norm"]]
         wav_path = os.path.join(data_dir, "wavs", f"{wave_file}.wav")
         speaker_name = "ljspeech"
-        return text_norm wav_path, speaker_name
+        return text_norm, wav_path, speaker_name
 
     def setup_eos_token(self):
         return _eos
