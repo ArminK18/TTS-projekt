@@ -151,7 +151,7 @@ class LJSpeechProcessor(BaseProcessor):
     def split_line(self, data_dir, line, split):
         parts = line.strip().split(split)
         wave_file = parts[self.positions["wave_file"]]
-        text_norm = parts[self.position["text_norm"]]
+        text_norm = parts[self.positions["text_norm"]]
         wav_path = os.path.join(data_dir, "wavs", f"{wave_file}.wav")
         speaker_name = "ljspeech"
         return text_norm, wav_path, speaker_name
