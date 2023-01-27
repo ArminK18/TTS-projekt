@@ -137,6 +137,7 @@ class LJSpeechProcessor(BaseProcessor):
     positions = {
         "wave_file": 0,
         "text": 1,
+        "text_norm: 2,
     }
     train_f_name: str = "metadata.csv"
 
@@ -150,9 +151,10 @@ class LJSpeechProcessor(BaseProcessor):
     def split_line(self, data_dir, line, split):
         parts = line.strip().split(split)
         wave_file = parts[self.positions["wave_file"]]
+        text_norm = parts[self.position["text_norm"]]
         wav_path = os.path.join(data_dir, "wavs", f"{wave_file}.wav")
         speaker_name = "ljspeech"
-        return wav_path, speaker_name
+        return text_norm wav_path, speaker_name
 
     def setup_eos_token(self):
         return _eos
