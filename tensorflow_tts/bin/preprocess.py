@@ -519,6 +519,7 @@ def gen_normal_mel(mel_path, scaler, config):
         mel_norm.astype(np.float32),
         allow_pickle=False,
     )
+    print(mel)
 
 
 def normalize():
