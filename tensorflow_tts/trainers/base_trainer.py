@@ -247,7 +247,7 @@ class GanBasedTrainer(BasedTrainer):
         """Set generator optimizer (MUST)."""
         self._gen_optimizer = generator_optimizer
         if self._is_generator_mixed_precision:
-            self._gen_optimizer = tf.keras.mixed_precision.experimental.LossScaleOptimizer(
+            self._gen_optimizer = tf.keras.mixed_precision.LossScaleOptimizer(
                 self._gen_optimizer, "dynamic"
             )
 
