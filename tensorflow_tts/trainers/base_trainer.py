@@ -248,7 +248,7 @@ class GanBasedTrainer(BasedTrainer):
         self._gen_optimizer = generator_optimizer
         if self._is_generator_mixed_precision:
             self._gen_optimizer = tf.keras.mixed_precision.LossScaleOptimizer(
-                self._gen_optimizer, "dynamic"
+                self._gen_optimizer, "bool"
             )
 
     def get_gen_optimizer(self):
