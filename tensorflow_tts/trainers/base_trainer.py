@@ -259,8 +259,8 @@ class GanBasedTrainer(BasedTrainer):
         """Set discriminator optimizer (MUST)."""
         self._dis_optimizer = discriminator_optimizer
         if self._is_discriminator_mixed_precision:
-            self._dis_optimizer = tf.keras.mixed_precision.experimental.LossScaleOptimizer(
-                self._dis_optimizer, "dynamic"
+            self._dis_optimizer = tf.keras.mixed_precision.LossScaleOptimizer(
+                self._dis_optimizer, True
             )
 
     def get_dis_optimizer(self):
