@@ -7,7 +7,7 @@
 ###########################################################
 #                FEATURE EXTRACTION SETTING               #
 ###########################################################
-sampling_rate: 22050
+sampling_rate: 16000
 hop_size: 256            # Hop size.
 format: "npy"
 
@@ -97,9 +97,9 @@ gradient_accumulation_steps: 1
 ###########################################################
 discriminator_train_start_steps: 200     # steps begin training discriminator
 train_max_steps: 4000                    # Number of training steps.
-save_interval_steps: 20                  # Interval steps to save checkpoint.
-eval_interval_steps: 5                   # Interval steps to evaluate the network.
-log_interval_steps: 1                    # Interval steps to record the training log.
+save_interval_steps: 50                  # Interval steps to save checkpoint.
+eval_interval_steps: 10                  # Interval steps to evaluate the network.
+log_interval_steps: 2                    # Interval steps to record the training log.
 
 ###########################################################
 #                     OTHER SETTING                       #
